@@ -6,11 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 const port = 3000;
-app.get('/', (req, res) => {
-    res.send('Hola mundo!');
+app.get("/", (req, res) => {
+    res.send("Hola mundo!");
 });
-app.post('/', (req, res) => {
-    res.send('peticion post');
+app.post("/", (req, res) => {
+    res.send("peticion post");
 });
 app.listen(port, () => {
     console.log(`Escuchando en el puerto: ${port}`);

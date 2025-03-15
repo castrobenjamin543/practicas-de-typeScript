@@ -2,19 +2,33 @@
   "name": "curso-fullstack-typescript-rodrigo-mendez",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --watch",
-    "serve": "node dist/index.js",
-    "start": "npm run build && npm run serve"
+    "test": "echo \"hola mundo\"",
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts",
+    "dev": "nodemon --watch src/** --ext ts,json --ignore src/**/*.spec.ts --exec ts-node src/main.ts",
+    "start": "npm run build && npm run dev",
+    "format": "prettier --write src/**/*.ts",
+    "prepare": "husky"
   },
   "author": "Benjamin Arias Castro",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.22.0",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.10",
-    "typescript": "^5.8.2"
+    "eslint": "^9.22.0",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.9",
+    "prettier": "3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1"
   },
   "dependencies": {
     "express": "^4.21.2"
